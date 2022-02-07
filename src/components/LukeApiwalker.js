@@ -39,8 +39,6 @@ const LukeApiwalker = () => {
           Object.values(response.data.results[atributeNumber - 1])
         );
         setIsApiValid(false);
-        // setIsApiValid(false);
-        // console.log(response.data.results[1]);
       })
       .catch((err) => {
         setIsApiValid(true);
