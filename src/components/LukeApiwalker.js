@@ -38,10 +38,14 @@ const LukeApiwalker = () => {
         setAtributeValueList(
           Object.values(response.data.results[atributeNumber - 1])
         );
+        setIsApiValid(false);
         // setIsApiValid(false);
         // console.log(response.data.results[1]);
       })
-      .catch((err) => setIsApiValid(true));
+      .catch((err) => {
+        setIsApiValid(true);
+        setIsSubmitted(false);
+      });
   }, [submitClicked]);
 
   const submitHandler = (e) => {
